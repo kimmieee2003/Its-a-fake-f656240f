@@ -17,7 +17,9 @@ INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) V
 INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) VALUE ("Aarde", 149.597870, 1, 12.756, NULL);
 INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) VALUE ("Mars", 227.936640, 0.1, 6.794, NULL);
 INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) VALUE ("Mars", 227.936640, 0.1, 6.794, NULL);
-UPDATE planeten
-SET naam = 'Mars', naam= 'Teenalp'
-WHERE id = 6;
+/* UPDATE planeten*/
+-- SET naam = 'Mars', naam= 'Teenalp'
+-- WHERE id = 6;
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM planeten WHERE id= 6;
 SELECT * FROM planeten;
